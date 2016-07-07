@@ -1,3 +1,5 @@
+
+<link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
 <!-- Navigation -->
 <link href="<?php echo base_url('assets/img/favicon.ico')?>" rel="shortcut icon" type="image/x-icon">
 
@@ -11,16 +13,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Thailand Roleplay Gamimg</a>
+                <a class="navbar-brand" href="index.html">Thailand Roleplay Gaming</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Register</a>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Register</a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="<?php echo base_url('main/loadlogin')?>">Login</a>
                     </li>
 <!--                    <li>
                         <a href="contact.html">Contact</a>

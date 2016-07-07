@@ -83,7 +83,9 @@
                     <h1 class="page-header">
                         Welcome to Thailand Roleplay Gamimg
                     </h1>
+                    <a href="<?php echo base_url('main/knowlead') ?>" class="btn btn-primary">Knowledge</a><hr>
                 </div>
+
                 <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -91,9 +93,9 @@
                         </div>
                         <div class="panel-body">
                             <p>Thailand Roleplay Gaming
-Community ที่รวบรวมผู้เล่นที่ชื่อชอบการเล่นเกมส์ ArmA 3 (ถูกลิขสิทธิ์) แบบ Roleplay (สวมบทบาท) และจำลองการเล่นแบบทหารเสมือนจริง (Military Simulator) ภายใต้พื้นฐานของ " การเล่นเกมส์ " 
-</p>
-                            
+                                Community ที่รวบรวมผู้เล่นที่ชื่อชอบการเล่นเกมส์ ArmA 3 (ถูกลิขสิทธิ์) แบบ Roleplay (สวมบทบาท) และจำลองการเล่นแบบทหารเสมือนจริง (Military Simulator) ภายใต้พื้นฐานของ " การเล่นเกมส์ " 
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -104,7 +106,7 @@ Community ที่รวบรวมผู้เล่นที่ชื่อ�
                         </div>
                         <div class="panel-body">
                             <p>หากท่านต้องการสมัครเข้ามาในกลุ่ม Facebook Thailand Roleplay Gaming รบกวนใช้ Account Facebook ของตัวท่านเอง เปลี่ยนรูป Profile เป็นรูปของท่าน หรือเปิด Time line ให้ทาง Staff ตรวจสอบข้อมูลและการเคลื่อนไหวของ Facebook เพื่อยืนยันว่ามีตัวตนจริง</p>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -117,7 +119,7 @@ Community ที่รวบรวมผู้เล่นที่ชื่อ�
                             <p><a href="https://www.youtube.com/channel/UCGkpqGut1CoJDgFO773VA9Q">Youtube : ArmA 3 Thailand Roleplay Gaming </a> <br>
                                 <a href="https://www.facebook.com/Thailand-Roleplay-Gaming-555722377899082">Faceboook : Thailand Roleplay Gaming</a>
                             </p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -130,102 +132,150 @@ Community ที่รวบรวมผู้เล่นที่ชื่อ�
                     <h2 class="page-header">Event</h2>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    
-                        <img class="img-responsive img-portfolio img-hover" src="http://i.imgur.com/pE0uIyb.jpg" alt="">
+
+                    <img class="img-responsive img-portfolio img-hover" src="http://i.imgur.com/pE0uIyb.jpg" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                  
-                        <img class="img-responsive img-portfolio img-hover" src="http://i.imgur.com/jq4wnnz.jpg" alt="">
+
+                    <img class="img-responsive img-portfolio img-hover" src="http://i.imgur.com/jq4wnnz.jpg" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    
-                        <img class="img-responsive img-portfolio img-hover" src="http://i.imgur.com/D60YrjF.jpg" alt="">
+
+                    <img class="img-responsive img-portfolio img-hover" src="http://i.imgur.com/D60YrjF.jpg" alt="">
                     </a>
-<!--                </div>
-                <div class="col-md-4 col-sm-6">
-                    
-                        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                    </a>
+                    <!--                </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+                                            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+                                            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        
+                                            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                                        </a>
+                                    </div>-->
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    
-                        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    
-                        <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                    </a>
-                </div>-->
-            </div>
-            <!-- /.row -->
+                <!-- /.row -->
 
-            <!-- Features Section -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="page-header">Server Mod Update</h2>
-                </div>
-                <div class="col-md-6">
-                    <p>The Modern Business template by Start Bootstrap includes:</p>
-                    <ul>
-                        <li><strong>Bootstrap v3.2.0</strong>
-                        </li>
-                        <li>jQuery v1.11.0</li>
-                        <li>Font Awesome v4.1.0</li>
-                        <li>Working PHP contact form with validation</li>
-                        <li>Unstyled page elements for easy customization</li>
-                        <li>17 HTML pages</li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-responsive" src="http://i.imgur.com/Vqzd3Zb.jpg" alt="">
-                </div>
-            </div>
-            <!-- /.row -->
-
-            <hr>
-
-<!--             Call to Action Section 
-            <div class="well">
-                <div class="row">
-                    <div class="col-md-8">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
-                    </div>
-                </div>
-            </div>-->
-
-            <hr>
-
-            <!-- Footer -->
-            <footer>
+                <!-- Features Section -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Copyright &copy; Thailand Roleplay Gamimg</p>
+                        <h2 class="page-header">Server Mod Update</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p>The Modern Business template by Start Bootstrap includes:</p>
+                        <ul>
+                            <li><strong>Bootstrap v3.2.0</strong>
+                            </li>
+                            <li>jQuery v1.11.0</li>
+                            <li>Font Awesome v4.1.0</li>
+                            <li>Working PHP contact form with validation</li>
+                            <li>Unstyled page elements for easy customization</li>
+                            <li>17 HTML pages</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kIB9xCHB5gw" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
-            </footer>
+                <!-- /.row -->
 
-        </div>
-        <!-- /.container -->
+                <hr>
 
-        <!-- jQuery -->
-        <script src="<?php echo base_url('assets/js/jquery.js') ?>"></script>
+                <!--             Call to Action Section 
+                            <div class="well">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                                    </div>
+                                </div>
+                            </div>-->
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
+                <hr>
 
-        <!-- Script to Activate the Carousel -->
-        <script>
-            $('.carousel').carousel({
-                interval: 5000 //changes the speed
-            })
-        </script>
+                <!-- Footer -->
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; Thailand Roleplay Gaming</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+            <!-- /.container -->
+            <style>
+                .form-control{
+                    margin: 0 auto;
+                   
+                }
+                .modal-body{
+                    margin: 0;
+                    text-align: center;
+                }
+                
+                
+            </style>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Register Thailand Roleplay Gamming</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="<?php echo base_url('main/insert')?>">
+                                <input style="width: 50%" class="form-control"type="text" name="username" value="" placeholder="Username" /> <br>
+                               
+                                <input style="width: 50%"class="form-control"type="password" name="password" value="" placeholder="Password"/><br>
+                                <input style="width: 50%"class="form-control" type="hidden" name="status" value="member"  readonly="" />
+                                <input style=""type="submit" value="Register" class="btn btn-primary" />
+                            </form>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- jQuery -->
+            <script src="<?php echo base_url('assets/js/jquery.js') ?>"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
+
+            <!-- Script to Activate the Carousel -->
+            <script>
+                $('.carousel').carousel({
+                    interval: 5000 //changes the speed
+                })
+            </script>
 
     </body>
 

@@ -13,16 +13,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Thailand Roleplay Gaming</a>
+            <a class="navbar-brand" href="">Thailand Roleplay Gaming </a>
         </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#" data-toggle="modal" data-target="#myModal" >แก้ไขข้อมูลส่วนตัว <span class="sr-only">(current)</span></a></li>
+        </ul>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#myModal"></a>
+                    <a href="#" data-toggle="modal" data-target="#myModal2">เปลี่ยนรหัสผ่าน</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('checklogin/logout') ?>">Logout</a>
+                    <a href="<?php echo base_url('checklogin/logout') ?>">Logout as <?php echo $this->session->userdata('status','memberuser')?> <?php echo $this->session->userdata('memberuser');?></a>
                 </li>
                 <!--                    <li>
                                         <a href="contact.html">Contact</a>
@@ -89,6 +92,8 @@
 </nav>
 <!-- jQuery -->
 <script src="<?php echo base_url('assets/js/jquery.js') ?>"></script>
+<script src="<?php echo base_url('assets/js/angular.min.js')?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/js/app.js')?>" type="text/javascript"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>

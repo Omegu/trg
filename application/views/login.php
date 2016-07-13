@@ -41,7 +41,7 @@ and open the template in the editor.
                 </form>
 
 
-                <hr><br><a href="<?php echo site_url('main/chart') ?>">Chart</a>
+                <hr>
             </div> 
 
         </div>

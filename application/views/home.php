@@ -167,20 +167,12 @@
                 <!-- Features Section -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="page-header">Server Mod Update</h2>
+                        <h2 class="page-header">Tutorial</h2>
                     </div>
                     <div class="col-md-6">
-                        <p>The Modern Business template by Start Bootstrap includes:</p>
-                        <ul>
-                            <li><strong>Bootstrap v3.2.0</strong>
-                            </li>
-                            <li>jQuery v1.11.0</li>
-                            <li>Font Awesome v4.1.0</li>
-                            <li>Working PHP contact form with validation</li>
-                            <li>Unstyled page elements for easy customization</li>
-                            <li>17 HTML pages</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1f0Coo7v8-Y" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="embed-responsive embed-responsive-16by9">
@@ -239,10 +231,13 @@
                         </div>
                         <div class="modal-body">
                             <form method="POST" action="<?php echo base_url('main/insert')?>">
-                                <input style="width: 50%" class="form-control"type="text" name="username" value="" placeholder="Username" /> <br>
+                                <input style="width: 50%" class="form-control"type="text" name="username" value="" placeholder="Username" required="" /> <br>
                                
-                                <input style="width: 50%"class="form-control"type="password" name="password" value="" placeholder="Password"/><br>
-                                <input style="width: 50%"class="form-control" type="hidden" name="status" value="member"  readonly="" />
+                                <input style="width: 50%"class="form-control"type="password" name="password" value="" placeholder="Password" required=""/><br>
+                                <input style="width: 50%" class="form-control"type="email" name="membermail" value="" placeholder="Email" required=""/><br>
+                                <input style="width: 50%" class="form-control"type="text" name="memberfb" value="" placeholder="Facebook URL" required=""/><br>
+                                <input style="width: 50%"class="form-control" type="hidden" name="memberstatus" value="member"  readonly="" />
+                                <input style="width: 50%"class="form-control" type="hidden" name="whitelist" value="no"  readonly="" />
                                 <input style=""type="submit" value="Register" class="btn btn-primary" />
                             </form>
 

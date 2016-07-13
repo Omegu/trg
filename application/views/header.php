@@ -2,7 +2,7 @@
 <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
 <!-- Navigation -->
 <link href="<?php echo base_url('assets/img/favicon.ico')?>" rel="shortcut icon" type="image/x-icon">
-
+<script src="<?php echo base_url('assets/js/angular.min.js')?>" type="text/javascript"></script>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#" data-toggle="modal" data-target="#myModal">Register</a>
+<!--                        <a href="#" data-toggle="modal" data-target="#myModal">Register</a>-->
                     </li>
                     <li>
                         <a href="<?php echo base_url('main/loadlogin')?>">Login</a>
@@ -87,3 +87,6 @@
         </div>
         <!-- /.container -->
     </nav>
+<script src="<?php echo base_url('assets/js/jquery-1.12.4.min.js')?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/js/jquery.dataTables.min.js')?>" type="text/javascript"></script>
+    </script>

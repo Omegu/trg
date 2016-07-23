@@ -45,5 +45,9 @@ class Main extends CI_Controller {
         $this->load->view('layout/header');
         $this->load->view('admin/admin');
     }
-
+    
+    public function exampic(){
+        $this->load->view('example');
+        
+    }
 }

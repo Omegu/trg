@@ -8,156 +8,182 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Staff Management</title>
-        <style>
+       <style>
             .staffhead{
                 text-align: center;
             }
         </style>
     </head>
     <body>
-        <div class="container"> <br><br><br><br>
-            <h3 class="staffhead">Staff Management</h3>
-            <div class="tabfad">
+         <br><br><br>
+        <div class="container">       
+            <hr>
+        
+            <div class="tabledata">
+                <h4>ข้อมูลส่วนตัวของ <?php echo $this->session->userdata('memberuser') ?></h4>
+                <table class="table table-hover">
+                    <?php
+                    $userdata = $this->session->userdata('memberuser');
+                    $memberquery = $this->db->query("SELECT * FROM tb_member WHERE member_user='$userdata'");
 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Member List</a></li>
-                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mission Lastplay</a></li>
-                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Ban user list</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Manage Player</a></li>
-                </ul>
-               
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active" id="home">
-                        <br>
-                        <div class="">
-                            <form method="post" action="">
-                                <select name="whitelist"  style="width: 8%">
-                                    <option>Yes</option>
-                                    <option>No</option>
-                                </select>
-                                <input type="submit" value="Go" class="btn btn-primary"/>
-                            </form> 
-                        </div>
+                    foreach ($memberquery->result() as $rows) {
+                        ?>
+                        <tbody>
+                            <tr>
+                                <td>TRG ID</td>
+                                <td><?php echo $rows->member_id ?></td>
+                            </tr>
+                            <tr>
+                                <td>TRG User</td>
+                                <td><?php echo $rows->member_user ?>
+                            </tr>
+                            <tr>
+                                <td>TRG Status</td>
+                                <td><?php echo $rows->member_status ?>
+                            </tr>
+                            <tr>
+                                <td>TRG Gender</td>
+                                <td><?php echo $rows->member_gender ?>
+                            </tr>
+                            <tr>
+                                <td>TRG Age</td>
+                                <td><?php echo $rows->member_age ?>
+                            </tr>
+                            <tr>
+                                <td>TRG Nickname</td>
+                                <td><?php echo $rows->member_nickname ?>
+                            </tr>
+                            <tr>
+                                <td>TRG Email</td>
+                                <td><?php echo $rows->member_email ?>
+                            </tr>
+                            <tr>
+                                <td>ARMA3UID</td>
+                                <td><?php echo $rows->member_uid ?>
+                            </tr>
+                            
 
+                        </tbody>
+                    <?php } ?>
+                </table> 
+            </div>
+        </div>
 
-                        <table  id="example" class="table table-striped" cellspacing="0" width="100%">
-                            <thead>
-
-                                <tr>
-                                    <th>ID</th>
-                                    <th>User</th>
-                                    <th>Status</th>
-                                    <th>Whitelist</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                $member = $this->input->post('whitelist');
-                                $queryuser = $this->db->query("SELECT * FROM tb_member WHERE member_whitelist='$member'");
-                                foreach ($queryuser->result() as $row) {
-                                    $id = $row->member_id;
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $row->member_id; ?></td>
-                                        <td><?php echo$row->member_user; ?></td>
-                                        <td><?php echo$row->member_status; ?></td>
-                                        <td><?php echo$row->member_whitelist; ?></td>
-                                        <td><a href="<?php echo base_url('admin/deletedata/' . $id) ?>" onclick=" return confirm('ลบหรือไม่')">ลบ</a></td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table></div>
-                    <div role="tabpanel" class="tab-pane fade" id="profile">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Mission name</th>
-                                    <th>Maxplayer</th>
-                                    <th>Player on mission</th>
-                                </tr>
-                            </thead>
-                            <?php
-                            $missiondata = $this->db->query('SELECT * FROM tb_missionlist');
-                            foreach ($missiondata->result() as $rowmission) {
-                                ?>
-                                <tbody>
-                                    <tr>
-                                        <td><?php echo $rowmission->mission_name ?></td>
-                                        <td><?php echo $rowmission->mission_playermax ?></td>
-                                        <td><?php echo $rowmission->mission_playnow ?></td>
-                                    </tr>
-                                </tbody>
-                            <?php } ?>
-                        </table>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">แก้ไขข้อมูลส่วนตัว</h4>
                     </div>
-                    <div role="tabpanel" class="tab-pane fade" id="messages">.asdasdasdas..</div>
-                    <div role="tabpanel" class="tab-pane fade" id="settings">
-                        <form method="post" action="<?php echo base_url('admin/manageplayer')?>">
-                        <table  id="managerplayer" class="table table-striped" cellspacing="0" width="100%">
-                            <thead>
-
-                                <tr>
-                                    <th>ID</th>
-                                    <th>User</th>
-                                    <th>Status</th>
-                                    <th>Whitelist</th>
-                                    <th colspan="2">Manage</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                    <form method="POST" action="<?php echo base_url('member/editmember') ?>" >
+                        <div class="modal-body">
+                            <table class="table table-hover">
                                 <?php
-                                $managemember = "yes";
-                                $managedata = $this->db->query("SELECT * FROM tb_member WHERE member_whitelist='$managemember'");
-                                foreach ($managedata->result() as $row) {
-                                    $manageid = $row->member_id;              
+                                $userdatamodal = $this->session->userdata('memberuser');
+                                $memberquerymodal = $this->db->query("SELECT * FROM tb_member WHERE member_user='$userdatamodal'");
+                                foreach ($memberquerymodal->result() as $rows) {
                                     ?>
-                                    <tr>
-                                        <td><?php echo$row->member_id; ?></td>
-                                        <td><?php echo$row->member_user; ?></td>
-                                        <td><?php echo$row->member_status; ?></td>
-                                        <td><?php echo$row->member_whitelist; ?></td>
-                                        <td></td>
+                                    <tbody>
+                                        <tr>
+                                            <td>TRG ID</td>
+                                            <td> <?php echo $rows->member_id ?>
+                                                <input type="hidden" name="memberid" value="<?php echo $rows->member_id ?>"  />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>TRG User</td>
+                                            <td><?php echo $rows->member_user ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TRG Status</td>
+                                            <td><?php echo $rows->member_status ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TRG Gender</td>
+                                            <td><select name="membergender" class="input-sm" required="" >
+                                                    <option>กรุณาใส่เพศ</option>
+                                                    <option>ชาย</option>
+                                                    <option>หญิง</option>
+                                                </select >
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>TRG Age</td>
+                                            <td><input type="number" name="memberage" value="<?php echo $rows->member_age ?>" required=""/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TRG Nickname</td>
+                                            <td><input type="text" name="membernickname" value="<?php echo $rows->member_nickname ?>"required="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>TRG Email</td>
+                                            <td><input type="email" name="memberemail" value="<?php echo $rows->member_email ?>" required=""/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ARMA3UID</td>
+                                            <td><input type="text" name="memberuid" value="<?php echo $rows->member_uid ?>" required=""/></td>
+                                        </tr>
                                         
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                            </form>
 
-                    </div>
+                                    </tbody>
+                                <?php } ?>
+                            </table>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div></form>
                 </div>
 
             </div>
-
-
-
-            
         </div>
-
-
-
-        <!-- datatable jquery-->
-        <script>
-            $(document).ready(function () {
-                $('#example').DataTable();
-            });
-            $(document).ready(function () {
-                $('#manageplayer').DataTable();
-            });
-
-        </script>
+    </div>
+        <style>
+            
+            .fieldWrapper{
+                margin: 0 auto;
+                width: 50%;
+            }
+            </style>
+    <!-- Modal2 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Change password</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/changepassword')?>" method="post">
+                        <div class="fieldWrapper"> 
+                            <input type="hidden" name="memberidchange" value="<?php echo $rows->member_id ?>" />
+                            <input class="form-control"placeholder="กรอกรหัสผ่านที่จะเปลี่ยน"type="password" name="pass1" id="pass1">
+                        </div><br>
+                        <div class="fieldWrapper">
+                            <input class="form-control" placeholder="กรอกรหัสผ่านอีกครั้ง"type="password" name="pass2" id="pass2" onkeyup="checkPass(); return false;">
+                            <span id="confirmMessage" class="confirmMessage"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">เปลี่ยนรหัสผ่าน</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </body>
 
     <script>
-        $('#myTabs a').click(function (e) {
-            e.preventDefault()
-            $(this).tab('show')
-            $('#myTabs a[href="#profile"]').tab('show') // Select tab by name
-            $('#myTabs a:first').tab('show') // Select first tab
-            $('#myTabs a:last').tab('show') // Select last tab
-            $('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
-        })
-    </script>
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+        $('#myTabs a[href="#profile"]').tab('show') // Select tab by name
+        $('#myTabs a:first').tab('show') // Select first tab
+        $('#myTabs a:last').tab('show') // Select last tab
+        $('#myTabs li:eq(2) a').tab('show') // Select third tab (0-indexed)
+    })
+</script>
 </html>

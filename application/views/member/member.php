@@ -170,7 +170,7 @@ and open the template in the editor.
                     <h4 class="modal-title" id="myModalLabel">Change password</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="" method="">
                         <div class="fieldWrapper"> 
                             <input class="form-control"placeholder="กรอกรหัสผ่านที่จะเปลี่ยน"type="password" name="pass1" id="pass1">
                         </div><br>

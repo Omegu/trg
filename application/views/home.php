@@ -83,7 +83,7 @@
                     <h1 class="page-header">
                         Welcome to Thailand Roleplay Gamimg
                     </h1>
-                    <a href="<?php echo base_url('main/knowlead') ?>" class="btn btn-primary">Knowledge</a><hr>
+                    <a href="<?php echo base_url('main/exampic') ?>" class="btn btn-primary">Knowledge</a><hr>
                 </div>
 
                 <div class="col-md-4">
